@@ -241,11 +241,15 @@ p.ex1 {
   </body>
   </html>
 
+<!DOCTYPE html>
+  <html>
   <head>
     <title>My Daily Activities</title>
     <script type="text/javascript" src=https://www.gstatic.com/charts/loader.js></script>
   </head>
-  <div id="chart_div></div>
+ <body>
+   <!-- Create a div element to hold the chart -->
+   <div id="chart_div style="width: 600px; height: 400px;"></div>
 
     <script type="text/javascript">
     google.charts.load(‘current’, { ‘packages’ : [‘corechart’] });
@@ -270,6 +274,8 @@ chart.draw(data, options);
 
 }
   </script>
+</body>
+</html>
 
 
 <script type="text/javascript">
@@ -323,7 +329,7 @@ chart.draw(data, options);
       data.addRows([
         ['London', 8673713],
         ['Birmingham', 1111307],
-        ['Edingburgh', 464990]
+        ['Edinburgh', 464990]
         ]);
 
       var options = {
@@ -336,6 +342,58 @@ chart.draw(data, options);
 
       var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
       chart.draw(data, options);
+    }
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+ <title>City Population Line Chart</title>
+ <!-- Include Google Charts API -->
+ <script type="text/javascript" src"https://www.gstatic.com/charts/loader.js"></script>
+</head>
+<body>
+  <!-- Create a div element to hold the chart -->
+  <div id="chart_div" style="width: 100px; height: 600p;"></div>
+
+  <script>
+    // Load the corechart package and set a callback function
+    google.charts.load('current', { 'pachages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    // Callback function to draw the line chart
+    function drawChart() {
+      // Create a DataTable with columns for year and city populations
+    var data = new google.visualization.DtataTable();
+    data.addColumn('number', 'Year');
+    data.addColumn('number', 'London');
+    data.addColumn('number', 'Birmingha,');
+    data.addColumn('number', 'Edinburgh');
+
+    // Add data for each year and city
+    data.addRows([
+      [2013, 8414000, 1092200, 485000],
+      [2015, 8661000, 1113000, 507000],
+      [2017, 8916000, 1137100, 519000],
+      [2021, 9426000, 1142500, 543000],
+      [2023, 9648000, 1153900, 554000]
+    ]);
+
+   // Set cgart options
+  var options = {
+    title: 'City Population Trends (2013-2023)',
+    hAxis: {title: 'Year' },
+    vAxis: {title: 'Population' },
+    colors: ['#3366cc', '#dc3912', '#ff9900'], // Line colors for each city
+    curveType: 'function', // Display lines smoothly
+    legend: { position: 'bottom' } // Display legend at the bottom
+  };
+
+  // Create a line chart and place it in the 'chart_div' element 
+  var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+  chart.draw(data, options);
     }
   </script>
 </body>
