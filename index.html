@@ -323,7 +323,18 @@ chart.draw(data, options);
     return wordCount;
   }
 
-  // Function to calculate 
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word ount for each section and acumulate the total
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}' ;
+  }
+
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayWordCount;
 </script>
                       
        
