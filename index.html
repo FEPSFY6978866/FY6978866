@@ -112,7 +112,35 @@ p.ex1 {
                   
               </body>
               </html>
+<head>
+    <title>My Daily Activities</title>
+    <script type="text/javascript" src=https://www.gstatic.com/charts/loader.js></script>
+  </head>
+   <div id="chart_div style="width: 600px; height: 400px;"></div>
 
+    <script type="text/javascript">
+    google.charts.load(‘current’, { ‘packages’ : [‘corechart’] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart(){
+     var data = google.visualization.arrayToDataTable([
+    ['Task', 'Hours per Day'],
+    ['Work', 8],
+    ['Sleep', 8],
+    ['Eat', 2],
+    ['Study', 4],
+    ['Exercise', 2]
+]);
+
+var options = {
+      title:'My Daily Activities'
+};
+
+var chart = new google.visulaization.PieChart-(document.getElementById('chart_div'));
+chart.draw(data, options);
+
+}
+  </script>
        Table 1: Data on cost and lifespan of bridge repairs
        <table>
          <tr>
@@ -193,35 +221,7 @@ p.ex1 {
       
 
 
-  <head>
-    <title>My Daily Activities</title>
-    <script type="text/javascript" src=https://www.gstatic.com/charts/loader.js></script>
-  </head>
-   <div id="chart_div style="width: 600px; height: 400px;"></div>
-
-    <script type="text/javascript">
-    google.charts.load(‘current’, { ‘packages’ : [‘corechart’] });
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart(){
-     var data = google.visualization.arrayToDataTable([
-    ['Task', 'Hours per Day'],
-    ['Work', 8],
-    ['Sleep', 8],
-    ['Eat', 2],
-    ['Study', 4]
-    ['Exercise', 2]
-]);
-
-var options = {
-      title:'My Daily Activities'
-};
-
-var chart = new google.visulaization.PieChart-(document.getElementById('chart_div'));
-chart.draw(data, options);
-
-}
-  </script>
+  
 
 
 
