@@ -8,8 +8,9 @@
   <h1><b>ENG0018 Computer Laboratory 2026/27</b><h1>
     <h2>Student URN: 6978866</h2>
     <hr> 
-    <h2 style="font-family:calibri;"><b></b>Conference paper: Bridge Deck Repairs</b></h2>
+    <h2 style="font-family:calibri;"><b>Conference paper: Bridge Deck Repairs</b><h2>
     <hr>
+    
     <!style for tables>
     <style>
       table  {
@@ -26,20 +27,15 @@
       }
 
         tr:nth-child(even) {
-          background-colour: #dddddd;
+          background-color: #dddddd;
         }
-
-
-
-      
     </style>
 
     <style>
 p.ex1 {
-  margin-left: 250px;
+  margin-left: 50px;
 }
       </style>
-  </head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -49,6 +45,7 @@ p.ex1 {
      <body style="background-color:#FFFFFF;margin-left:50px;">  
        
        <p class="ex1">
+       
        <!table of contents>
        <table>
 
@@ -71,8 +68,8 @@ p.ex1 {
        </table>
        <hr>
        <h3 id="Abstract">Abstract</h3>
-       <p class="ex1">
-         <pre>
+       
+       <p>
            This article assesses the significance of pharmaceutical products, how it has been discovered, shaped our lives, and
            incorporated within the use of technology. I'll explore evidence to show how scientists are the key and foundation to 
            the change of this world, for better or worse. By analyzing and researching: the origins of drug delivery, the advances 
@@ -80,17 +77,29 @@ p.ex1 {
            me inform people the quick advancements of science, technology and how we have been able to switch out traditional 
            remedies to nanotechnology, biotechnology, tablets and injections. By using published and peer reviewed books, articles
            and websites, it would support me reaching my aim to crossover the past, present, and future of medicine.
-         </pre>
+           </p>
+           
+           
        <hr>
         <h3 id="Introduction">Introduction</h3>
-       <p class="ex1">
-       <pre>
+       
+       <p id="Introduction_InText">
          Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an intelligent machine
          through the interaction of an oracle with the machine system, over a sequence of learning epochs. A distinctive component
          in an active system is the querying strategy, used to sample candidate training instances from a pool and evaluate 
          them for informativeness, i.e., their potential to improve the classification model.
-       </pre>
-       <h3 id=”Analysis and discussion”>Analysis and discussion</h3>
+       </p>
+       
+       
+       
+       
+       
+       <h3 id="Analysis and discussion">Analysis and discussion</h3>
+       
+       <p id="Analysis_InText">
+       
+       This is my analysis section. Try to check my word count function.
+       </p>
              
                 <head>
                   <title>MathML Example</title>
@@ -119,7 +128,7 @@ p.ex1 {
    <div id="chart_div"></div>
 
     <script type="text/javascript">
-      google.charts.load(‘current’, { ‘packages’ : [‘corechart’] });
+      google.charts.load('current', { 'packages' : ['corechart'] });
       google.charts.setOnLoadCallback(drawChart);
 
     function drawChart(){var data = google.visualization.arrayToDataTable([
@@ -189,22 +198,21 @@ p.ex1 {
        
        </p>
 
-      <!DOCTYPE html>
-      <html>
-      <head>
+      
+    
       <title>Change Button Colour</title>
-      </head>
+    
       <body>
         <button id="colorButton">Click me to change colour</button>
 
         <script>
           // Get a reference to the button element
-          var button = document.getElementById("colorButton)
+          var button = document.getElementById("colorButton")
 
           // Function to change the button color
-          function changeColor(|) {
+          function changeColor() {
             // Generate a random color (hexadecimal)
-            Var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            var randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
 
             // Set the button's background color ro the random color
             button.style.backgroundColor = randomColor;
@@ -214,13 +222,17 @@ p.ex1 {
           button.addEventListener("click" , changeColor);
         </script>
       </body>
-      </html>
+    
 
       
 
 
-  
+                      
+   <div id="chart_div"></div>
 
+<script type="text/javascript">
+      google.charts.load('current', { 'packages' : ['corechart'] });
+      google.charts.setOnLoadCallback(drawChart);
 
 
 <script type="text/javascript">
@@ -243,97 +255,94 @@ p.ex1 {
       vAxis: { title:'Salary'}
     };
     var chart = new google.visualization.ScatterChart(document.getElementById('chart_div'));
-    Chart.draw(data, options);
+    chart.draw(data, options);
   }
 </script>
 
-  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
-
-  <div id="last-updated">Loading last update time...</div>
-
-  <!-- Verify Button -->
-  <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+    <!-- Last commit time display -->
+<div id="last-updated">Loading last update time...</div>
+<!-- Verify Button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
     Verify Last Modified Time
-  </button>
-
-  <script>
+</button>
+<script>
     async function getLastUpdatedTime() {
-       const username = 'FEPSFY6978866';
-       const repo = 'FY6978866';
-
-      const url = https://api.github.com/repos/${username}/$(repo)/commits';
-
-  try {
-        const response = await fetch(url, {
-          method: 'GET',
-          headers: {
-            'Accept': 'application/vnd.github.v3+json',
-          }
-        });
-    if (!response.ok) {
-      thow new Error('Error fetching data: ${response.status} - ${response.statusText}');
-    }
-
-    const commits = await response.json();
-    if (commits && commits.length > 0) {
-      const lastCommitDate = new Date(commits[0].commit.committer.data);
-
-      // Displaying the time on load
-      document.getElementById('last-updated').innerText = 'Last Modified Time: ${lastCommitDate.toLocaleString()};
-    } else {
-      document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-    }
-  } catch (error) {
-    console.error('Error fetching the last update time:', error);
-    document.getElementById('last-updated).innerText = 'Error fetching update time. Please check the repository details.';
-  }
+        const username = 'FEPSFY6978866';
+        const repo = 'FY6978866';
+       
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+        try {
+            const response = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
+            }
+            const commits = await response.json();
+            if (commits && commits.length > 0) {
+                const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+                // Displaying the time on load
+                document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
+            } else {
+                document.getElementById('last-updated').innerText = 'No commits found in the repository.';
+            }
+        } catch (error) {
+            console.error('Error fetching the last updated time:', error);
+            document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repository details.';
+        }
     }
     // Function to verify the last update time by re-fetching it from the API
     async function verifyLastUpdatedTime() {
-      document.getLastUpdatedTime();
-      alert(2Last modified time has been successfully verified from GitHub API.");
+        document.getElementById('last-updated').innerText = 'Verifying...';
+        await getLastUpdatedTime();
+        alert("Last modified time has been successfully verified from GitHub API.");
     }
-
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
-  </script>
+</script>
 
+
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
 <!-- Placeholder for total word count -->
 <p id="totalWordCount"></p>
-
 <hr>
-
 <script>
   // Function to calculate and display word count for a specified section
   function displayWordCount(sectionId, outputId) {
     // Get the text content from the specified section
     const text = document.getElementById(sectionId).textContent;
-
     // Split text into words based on spaces and filter out any empty strings
     const wordArray = text.trim().split(/\s+/);
-
     // Count the words
     const wordCount = wordArray.length;
-
     // Return the word count for summing purposes
     return wordCount;
   }
-
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
-    // Calculate word ount for each section and acumulate the total
+    // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
     const AnalysisCount = displayWordCount("Analysis_InText");
-
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
-    document.getElementById("totalWordCount").innerText = 'Total word count: ${totalWordCount}' ;
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
-
   // Run the function for specific sections and display total count when the page loads
-  window.onload = displayWordCount;
+  window.onload = displayTotalWordCount;
 </script>
                       
+</html>       
        
-       
+
+
