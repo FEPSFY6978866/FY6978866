@@ -110,7 +110,7 @@ p.ex1 {
        
        <h3 id="The development of drug delivery systems in the 20th century">The development of drug delivery systems in the 20th century</h3>
        
-       <p id="The development of drug delivery systems in the 20th century_InText">
+       <p id="Discussion1_InText">
        A major breakthrough in drug delivery occurred in 1952, with one of the first modern controlled-release systems called
        Spansules® being produced. These formulations enabled medication to be released gradually over a 12-hour period, reducing 
        side effects and improving treatment effectiveness (A.,B & A.,P, 2023). Controlled release technologies also improved 
@@ -205,7 +205,7 @@ p.ex1 {
        <a href=”https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034”>Toshihiko et al (2023).</a>
 
     <h3 id="Impact of drug delivery systems">Impact of drug delivery systems</h3>
-    <p id="Impact of drug delivery systems_InText">
+    <p id="Discussion2_InText">
       The development of drug delivery systems has remarkably improved the efficacy, safety, and accessibility of medicines. 
       Transdermal patches and injectable microspheres allow drugs to be released gradually over time, reducing the need for 
       frequent dosing and improving patient compliance (Vaseem et al., 2024). These systems are beneficial for patients who 
@@ -220,7 +220,7 @@ p.ex1 {
     </p>
 
     <h3 id="Future developments and challenges in science">Future developments and challenges in science</h3>
-    <p id="Future developments and challenges in science_InText">
+    <p id="Discussion3_InText">
       As we all know, 2020 was the first outbreak recorded of COVID-19 in the UK. The vaccine was developed in November 2020 by the 
       University of Oxford and AstraZeneca (The story behind the Oxford-AstraZeneca covid-19 vaccine success 2026) with the use of 
       lipid nanoparticles as the formulation (Park et al., 2022). This vaccine was the quickest to have ever been developed in history 
@@ -238,7 +238,7 @@ p.ex1 {
     </p>
 
     <h3 id="Conclusion">Conclusion</h3>
-    <p id="conclusion_InText">
+    <p id="Conclusion_InText">
       In conclusion, the evolution and discovery of drug delivery systems has transformed healthcare through advances in pharmaceutical science 
       and technology. The development of drug formulations has improved treatment effectiveness, convenience, and patient quality of life. Although 
       challenges such as high costs, complex manufacturing processes, and potential toxicity remain, the benefits outweigh this since there is a 
@@ -454,12 +454,12 @@ Fastest Vaccine Development (2021) Guinness World Records. Available at: <a href
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_InText");
-    const Thedevelopmentofdrugdeliverysystemsinthe20thcenturyCount = displayWordCount("The development of drug delivery systems in the 20th century_InText");
-    const Impactofdrugdeliverysystems = displayWordCount("Impact of drug delivery systems_InText");
-    const Futuredevelopmentsandchallengesinscience = displayWordCount("Future developments and challenges in science_InText");
-    const Conclusion = displayWordCount("Conclusion_InText");
+    const Discussion1Count = displayWordCount("Discussion1_InText");
+    const Discussion2Count = displayWordCount("Discussion2_InText");
+    const Discussion3Count = displayWordCount("Discussion3_InText");
+    const ConclusionCount = displayWordCount("Conclusion_InText");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + Thedevelopmentofdrugdeliverysystemsinthe20thcenturyCount;
+    const totalWordCount = IntroductionCount + Discussion1Count + Discussion2Count + Discussion3Count + ConclusionCount ;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
